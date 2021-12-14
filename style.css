@@ -20,10 +20,14 @@ html {
   height: 100vh;
   display: grid;
   grid-template-columns: 5rem auto;
+  grid-template-rows: auto 4rem;
+  grid-template-areas:
+    "nav main"
+    "nav message";
 }
 
 .menu-bar {
-  grid-column: 1;
+  grid-area: nav;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +85,7 @@ html {
 }
 
 .content {
-  grid-column: 2;
+  grid-area: main;
 
   background-color: var(--dark-grey);
   color: white;
@@ -144,16 +148,21 @@ html {
   padding-right: 2rem;
 }
 
-.input {
+.div-input {
+  grid-area: message;
   width: 100%;
+}
+
+.input {
   height: 4rem;
   display: grid;
   grid-template-columns: 4fr 1fr;
+  grid-template-areas: "message button";
 }
 
 .input input {
-  grid-column: 1;
-  height: 100%;
+  grid-area: message;
+  height: 97%;
   border: none;
   font-size: 1.2rem;
   padding-left: 1rem;
@@ -171,7 +180,7 @@ html {
 }
 
 .input button {
-  grid-column: 2;
+  grid-area: button;
   bottom: 0;
   height: 100%;
   border: none;
