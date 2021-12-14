@@ -24,3 +24,11 @@ btn.addEventListener("click", () => {
   input.value = "";
   input.focus();
 });
+
+const input = document.getElementById("text");
+input.addEventListener("keyup", (e) => {
+  console.log(e.key);
+  if (e.key === "Enter") {
+    btn.click();
+  }
+});
