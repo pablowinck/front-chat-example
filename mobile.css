@@ -1,0 +1,54 @@
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto 4rem;
+    grid-template-areas:
+      "main"
+      "message";
+  }
+
+  .float-button {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9999;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    filter: invert(1);
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .menu-bar {
+    display: none;
+  }
+  .input {
+    grid-template-columns: 70vw auto;
+    grid-template-areas: "message button";
+  }
+
+  .content-item {
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1rem;
+    margin-left: 2rem;
+    max-width: 100vw;
+  }
+  .content-header {
+    padding-left: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .text {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    width: 50%;
+    text-align: inherit;
+    text-size-adjust: initial;
+  }
+}

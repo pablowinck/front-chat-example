@@ -14,10 +14,15 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+.float-button {
+  display: none;
 }
 
 .container {
-  height: 100vh;
+  overflow: hidden;
+  height: 100%;
   display: grid;
   grid-template-columns: 5rem auto;
   grid-template-rows: auto 4rem;
@@ -86,10 +91,8 @@ html {
 
 .content {
   grid-area: main;
-
   background-color: var(--dark-grey);
   color: white;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,12 +151,10 @@ html {
   padding-right: 2rem;
 }
 
-.div-input {
+.input {
   grid-area: message;
   width: 100%;
-}
 
-.input {
   height: 4rem;
   display: grid;
   grid-template-columns: 4fr 1fr;
