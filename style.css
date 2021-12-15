@@ -67,7 +67,7 @@ html {
   padding: 0.5rem;
   margin: 0.5rem;
 
-  background-color: grey;
+  background-color: var(--light-grey);
   color: white;
 
   text-align: center;
@@ -110,8 +110,13 @@ html {
 .content-item {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: start;
   padding: 1rem 0;
+}
+
+.text {
+  margin: 0.6rem 0 0 4rem;
 }
 
 /* Twitch link */
@@ -145,10 +150,6 @@ html {
   border-radius: 50%;
   background-color: var(--primary);
   margin-right: 0.5rem;
-}
-
-.content-body {
-  padding-right: 2rem;
 }
 
 .input {
